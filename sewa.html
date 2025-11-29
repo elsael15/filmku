@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sewa Film · FilmKu</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">FilmKu</div>
+    <button id="menuBtn" class="menu-toggle" aria-label="Buka menu">☰</button>
+    <ul id="navLinks" class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="film.html">Film</a></li>
+      <li><a href="info.html">Info</a></li>
+      <li><a href="bantuan.html">Bantuan</a></li>
+      <li><a href="sewa.html">Sewa Film</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+<section class="page-header">
+  <h1>Sewa Film</h1>
+  <p>Isi form buat sewa film yang kamu mau</p>
+</section>
+
+<section class="section alt">
+  <form class="form" onsubmit="handleOrder(event)">
+    <div class="row">
+      <label for="name">Nama *</label>
+      <input id="name" type="text" placeholder="Nama lengkap kamu" required>
+    </div>
+    <div class="row">
+      <label for="email">Email *</label>
+      <input id="email" type="email" placeholder="email@contoh.com" required>
+    </div>
+    <div class="row">
+      <label for="phone">No HP / WA *</label>
+      <input id="phone" type="tel" placeholder="08xx-xxxx-xxxx" required>
+    </div>
+
+    <div class="row">
+      <label>Pilih Paket *</label>
+      <label style="display:block; margin:8px 0"><input type="radio" name="package" value="single" required> Sewa Film Satuan</label>
+      <label style="display:block; margin:8px 0"><input type="radio" name="package" value="weekly"> Paket Mingguan (Rp 20.000)</label>
+      <label style="display:block; margin:8px 0"><input type="radio" name="package" value="monthly"> Paket Bulanan (Rp 50.000)</label>
+    </div>
+
+    <div class="row">
+      <label>Pilih Film *</label>
+      <label style="display:block; margin:6px 0"><input type="checkbox" name="films" value="pengabdi"> Pengabdi Setan 3 (12rb)</label>
+      <label style="display:block; margin:6px 0"><input type="checkbox" name="films" value="raid"> The Raid 3 (15rb)</label>
+      <label style="display:block; margin:6px 0"><input type="checkbox" name="films" value="cinta"> Cinta di Jakarta (10rb)</label>
+      <label style="display:block; margin:6px 0"><input type="checkbox" name="films" value="avengers"> Avengers: Secret Wars (18rb)</label>
+    </div>
+
+    <div class="row">
+      <label for="payment">Metode Bayar *</label>
+      <select id="payment" required>
+        <option value="">Pilih pembayaran</option>
+        <option value="bank">Transfer Bank</option>
+        <option value="gopay">GoPay</option>
+        <option value="ovo">OVO</option>
+        <option value="dana">DANA</option>
+        <option value="shopee">ShopeePay</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label for="notes">Catatan (opsional)</label>
+      <textarea id="notes" placeholder="Ada request khusus? Tulis di sini..." rows="4"></textarea>
+    </div>
+
+    <div class="row">
+      <button class="btn" type="submit">Proses Pesanan</button>
+    </div>
+  </form>
+</section>
+
+</main>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>Kontak</h4>
+      <p>WA: 0858-7654-3210</p>
+      <p>Email: halo@filmku.id</p>
+    </div>
+    <div>
+      <h4>Jam CS</h4>
+      <p>Senin - Minggu</p>
+      <p>09.00 - 21.00 WIB</p>
+    </div>
+    <div>
+      <h4>Sosial Media</h4>
+      <p>Instagram: @filmku.id</p>
+      <p>Twitter: @filmku_id</p>
+    </div>
+  </div>
+  <p class="copyright">© 2025 FilmKu. Semua hak dilindungi.</p>
+</footer>
+</body>
+</html>
